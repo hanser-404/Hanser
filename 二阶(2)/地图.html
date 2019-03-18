@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <meta name="keywords" content="百度地图,百度地图API，百度地图自定义工具，百度地图所见即所得工具" />
+    <meta name="description" content="百度地图API自定义地图，帮助用户在可视化操作下生成百度地图" />
+    <title>我的地图</title>
+    <!--引用百度地图API-->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <!-- 1.1版本 -->
+    <!-- <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script> -->
+    <!-- 申请密钥3.0版本 -->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&services=true&ak=IAj68NKaqBzDoFltbhijsz0smQr2BnQG"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header>
+        <img src="images/logo1.png">
+        <span class="header_sp">全域旅游数字化平台</span>
+        <div>
+            <!-- 天气 -->
+            <div></div>
+            <!-- 实时时间 -->
+            <span id="top_time"></span>
+        </div>
+    </header>
+    
+    <center>
+        <!-- 左侧 -->
+        <div class="c_left">
+            <div class="head">交通信号实时情况</div>
+            
+            <div id="outer">
+                <ul id="videoList">
+                    <li><video src="video/1.mp4" autoplay="autoplay"></video></li>
+                    <li><video src="video/2.mp4"></video></li>
+                    <li><video src="video/3.mp4"></video></li>
+                    <li><video src="video/4.mp4"></video></li>
+                    <li><video src="video/5.mp4"></video></li>
+                </ul>
+                <div id="navDiv">
+                    <p>画面一</p>
+                    <p>画面二</p>
+                    <p>画面三</p>
+                    <p>画面四</p>
+                    <p>画面五</p>
+                </div>
+            </div>
+            <article id="atc1"></article>
+        </div>
+        <!-- 中间区 -->
+        <div class="c_center">
+            <!-- 搜索框 -->
+            <div class="cen_select">
+                <span>旅游区域</span>
+                <input type="" id="address" placeholder="请输入要查的地方">
+                <button type="button" id="select">搜索</button>
+                <div>
+                    <b></b><span>拥挤度</span>
+                    <b></b><span>舒适度</span>
+                </div>
+            </div>
+            <!--百度地图容器-->
+            <div style="width:587px;height:545px;border:#ccc solid 1px;" id="dituContent"></div>
+        </div>
+        <!-- 右侧 -->
+        <div class="c_right">
+            <div class="head">景点动态画面展示</div>
+            <div id="outer1">
+                <ul id="videoList1">
+                    <li><video src="video/6.mp4" autoplay="autoplay"></video></li>
+                    <li><video src="video/7.mp4"></video></li>
+                    <li><video src="video/8.mp4"></video></li>
+                    <li><video src="video/9.mp4"></video></li>
+                    <li><video src="video/10.mp4"></video></li>
+                </ul>
+                <!--  -->
+                <div id="navDiv1">
+                    <p>画面一</p>
+                    <p>画面二</p>
+                    <p>画面三</p>
+                    <p>画面四</p>
+                    <p>画面五</p>
+                </div>
+            </div>
+        </div>
+        
+        
+    </center>
+    <article id="atc2">
+        <p id="yk">游客统计分析</p>
+        <div id="ky" class="bt">
+            <p>客源分析</p>
+            <div id="ky1"></div>
+        </div>
+        <div id="xf" class="bt">
+            <p>消费分析</p>
+            <div id="xf1"></div>
+        </div>
+        <div id="nl" class="bt">
+            <p>年龄分析</p>
+            <div id="nl1"></div>
+        </div>
+        <div id="qd" class="bt">
+            <p>渠道分析</p>
+            <div id="qd1"></div>
+        </div>
+    </article>
+    <article id="atc3">
+        <p>景点入住信息统计</p>
+        <div id="rz1"></div>
+    </article>
+    <article id="atc4">
+        <p>旅游景点天气数据分析</p>
+        <div id="kqwr">
+            <p>空气污染指数</p>
+            <div id="kqwr1">
+                <div >
+                    <span>CO2</span>
+                    <span class="wrzs dd"></span>
+                </div>
+                <div >
+                    <span>温度</span>
+                    <span id="wd1" class="dd"></span>
+                </div>
+                <div >
+                    <span>湿度</span>
+                    <span class="wrzs dd"></span>
+                </div>
+                <div >
+                    <span>PM2.5</span>
+                    <span class="wrzs dd"></span>
+                </div>
+                <div >
+                    <span>PM10</span>
+                    <span class="wrzs dd"></span>
+                </div>
+                <div >
+                    <span>土壤PH</span>
+                    <span class="wrzs dd"></span>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div id="tqsk">
+            <p>天气实况</p>
+            <div id="tqsk1">
+                <img id="tqsk2" >
+                <span id="tqsk3"></span>
+            </div>
+        </div>
+        <div id="cxjy">
+            <p>出行建议</p>
+            <span id="cxjy1"></span>
+        </div>
+    </article>
+    <article id="atc5">
+        <p>同景点排名分析</p>
+        <div id="ykmd">
+
+        </div>
+    </article>
+</body>
+<script type="text/javascript" src="js/echarts.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</html>
