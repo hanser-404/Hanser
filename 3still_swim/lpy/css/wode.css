@@ -1,0 +1,397 @@
+@charset "utf-8";
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+body,
+button,
+input,
+select,
+textarea {
+  font: 12px/1.5tahoma, arial;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: couriernew, courier, monospace;
+}
+small {
+  font-size: 12px;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+legend {
+  color: #000;
+}
+fieldset,
+img {
+  border: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+img {
+  vertical-align: top;
+}
+footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  height: 1rem;
+  width: 100%;
+  margin: 0 auto;
+  background-color: pink;
+}
+footer .dibu {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .dibu span {
+  font-size: 0.26rem;
+}
+footer .dibu img {
+  width: 30%;
+}
+footer .shouye {
+  width: 40%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #EAF1F0;
+}
+header {
+  position: relative;
+}
+.header1 {
+  width: 100%;
+  height: 0.4rem;
+}
+.header1 img {
+  width: 100%;
+}
+.header2 {
+  height: 2rem;
+  width: 100%;
+  background-color: #FFF900;
+  padding-top: 0.15rem;
+  display: flex;
+}
+.header2 .header2-left {
+  width: 90%;
+  display: flex;
+}
+.header2 .header2-left img {
+  width: 0.5rem;
+  height: 0.5rem;
+  padding-left: 0.3rem;
+}
+.header2 .header2-right {
+  width: 10%;
+}
+.header2 .header2-right img {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+#header3 {
+  width: 90%;
+  height: 2rem;
+  margin: 0 auto;
+  display: flex;
+  border: 1px #BBBBBB solid;
+  position: absolute;
+  top: 1.4rem;
+  background-color: white;
+  left: 0.36rem;
+}
+#header3 .header3-left {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+#header3 .header3-left .huany {
+  font-size: 0.46rem;
+  font-weight: bold;
+}
+#header3 .header3-left .xinling {
+  font-size: 0.28rem;
+  padding-top: 0.6rem;
+}
+#header3 .header3-right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#header3 .header3-right img {
+  width: 40%;
+}
+#header3 .header3-right a {
+  text-decoration: none;
+  padding-top: 0.2rem;
+  font-size: 0.28rem;
+}
+#header3 .header3-right .header3-bottom {
+  display: flex;
+}
+#header3 .header3-right .header3-bottom a {
+  margin-right: 0.2rem;
+}
+.kongbai {
+  height: 0.9rem;
+  width: 100%;
+}
+#cen {
+  display: flex;
+  height: 1.97rem;
+  width: 100%;
+  margin-top: 0.2rem;
+  justify-content: center;
+}
+#cen img {
+  width: 98%;
+}
+.cen1 {
+  width: 90%;
+  height: 2.4rem;
+  border: 1px #BBBBBB solid;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 0.3rem;
+}
+.cen1 .cen1-top {
+  display: flex;
+  height: 0.6rem;
+  align-items: center;
+}
+.cen1 .cen1-top span {
+  padding-left: 0.3rem;
+  font-size: 0.3rem;
+  font-weight: bold;
+}
+.cen1 .cen1-top a {
+  font-size: 0.26rem;
+  padding-left: 1.8rem;
+  color: #BAB3B3;
+}
+.cen1 .cen1-top .syou {
+  color: #BAB3B3;
+  padding-left: 1.4rem;
+}
+.cen1 .cen1-bottom {
+  display: flex;
+}
+.cen1 .cen1-bottom .yiyang {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.2rem;
+}
+.cen1 .cen1-bottom .yiyang img {
+  width: 50%;
+}
+.cen1 .cen1-bottom .yiyang span {
+  font-size: 0.28rem;
+  padding-top: 0.2rem;
+}
+#cen2 {
+  width: 90%;
+  margin: 0 auto;
+  border: 1px #BBBBBB solid;
+  height: 3.6rem;
+  margin-top: 0.3rem;
+}
+#cen2 p {
+  font-size: 0.28rem;
+  font-weight: bold;
+  padding-left: 0.3rem;
+  margin-top: 0.2rem;
+}
+#cen2 .cen2-img {
+  display: flex;
+  height: 1.6rem;
+  width: 96%;
+  margin: 0 auto;
+  border-radius: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.3rem;
+  background-color: #FFF900;
+}
+#cen2 .cen2-img img {
+  width: 20%;
+}
+#cen2 .cen2-img span {
+  font-size: 0.4rem;
+  font-weight: bold;
+  padding-left: 0.2rem;
+}
+#cen2 .cen2-span {
+  width: 100%;
+  height: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.2rem;
+}
+#cen2 .cen2-span span {
+  font-size: 0.3rem;
+  color: #009688;
+}
+.cen3 {
+  width: 90%;
+  margin: 0 auto;
+  height: 3.2rem;
+  border: 1px #BBBBBB solid;
+  margin-top: 0.3rem;
+}
+.cen3 p {
+  margin-top: 0.2rem;
+  font-size: 0.3rem;
+  font-weight: bold;
+  padding-left: 0.3rem;
+}
+.cen3 .cen3-1 {
+  display: flex;
+  width: 95%;
+  margin: 0.2rem 0;
+}
+.cen3 .cen3-1 .cen3-1-img {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cen3 .cen3-1 .cen3-1-img img {
+  width: 50%;
+}
+.cen3 .cen3-1 .cen3-1-span {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+}
+.cen3 .cen3-1 .cen3-1-span span {
+  font-size: 0.28rem;
+  padding-top: 0.1rem;
+}
+.cen3 .cen3-1 .cen3-1-right {
+  width: 20%;
+  height: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #70EDE1;
+  margin-top: 0.2rem;
+  border-radius: 12%;
+}
+.cen3 .cen3-1 .cen3-1-right a {
+  color: #009688;
+  font-size: 0.24rem;
+}
+.cen3 .cen3-1 .grey {
+  color: #C2AFAF;
+}
+#kongbai {
+  height: 1rem ;
+  width: 100%;
+}
+footer {
+  position: fixed;
+  padding: 0.1rem 0;
+  background-color: #d6d6d6;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 0.34rem;
+}
+.footer i {
+  font-size: 0.36rem;
+}
+footer > div > a:hover {
+  color: #163cff;
+}
+.foo-lan {
+  color: #163cff;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/*# sourceMappingURL=wode.css.map */

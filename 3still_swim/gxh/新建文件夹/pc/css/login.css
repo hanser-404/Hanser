@@ -1,0 +1,238 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+body,
+button,
+input,
+select,
+textarea {
+  font: 12px/1.5tahoma, arial, \5b8b\4f53;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: couriernew, courier, monospace;
+}
+small {
+  font-size: 12px;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+legend {
+  color: #000;
+}
+fieldset,
+img {
+  border: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+img {
+  vertical-align: middle;
+}
+a {
+  color: inherit;
+}
+a:hover {
+  color: skyblue !important;
+}
+header {
+  min-width: 1180px;
+  height: 60px;
+  background: #fff;
+  background: #fffbf0;
+}
+header > div {
+  width: 1180px;
+  height: 100%;
+  margin: 0 auto;
+}
+header > div > p {
+  float: right;
+  font-size: 20px;
+  line-height: 60px;
+}
+header > div > div {
+  float: left;
+}
+header > div > div img {
+  width: 52px;
+  margin-right: 38px;
+}
+header > div > div a {
+  font-weight: bold;
+  margin-right: 12px;
+}
+center {
+  position: relative;
+  height: 620px;
+  min-width: 1180px;
+  background: url(../image/登录/web_login_bg.ecb39528.jpg) no-repeat;
+  background-size: cover;
+}
+center > div {
+  width: 430px;
+  height: 360px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 15%;
+  background: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+center > div .y_hd {
+  text-align: left;
+}
+center > div .y_hd img {
+  width: 50px;
+  margin-right: 16px;
+}
+center > div .y_text {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 55px;
+}
+center > div .y_text input {
+  margin-bottom: 20px;
+  width: 280px;
+  height: 40px;
+}
+center > div .y_text .y_a {
+  display: block;
+  cursor: pointer;
+  width: 280px;
+  height: 40px;
+  background: #C44040;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  border: 0;
+  line-height: 40px;
+  letter-spacing: 8px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+center > div .y_text .y_se {
+  display: block;
+  opacity: 0;
+  color: red;
+  position: absolute;
+  bottom: 0px;
+  left: 150px;
+}
+center > div .y_help {
+  margin-top: 10px;
+  font-size: 14px;
+  padding-left: 12px;
+  overflow: hidden;
+}
+center > div .y_help span {
+  color: #aaa;
+  float: left;
+}
+center > div .y_help div {
+  float: right;
+}
+center > div .y_help div a {
+  margin-right: 12px;
+}
+footer {
+  min-width: 1180px;
+  box-sizing: border-box;
+  height: 220px;
+  background: #3A3737;
+  padding: 50px 90px 0 50px;
+  color: #fff;
+  position: relative;
+}
+footer p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+footer p span {
+  font-size: 36px;
+  margin-right: 12px;
+}
+footer p:last-child {
+  margin-top: 25px;
+}
+footer img {
+  float: right;
+  width: 103px;
+  margin-bottom: -20px;
+}
+footer > div {
+  position: absolute;
+  bottom: 60px;
+  right: 6px;
+}
+footer > div a {
+  display: inline-block;
+  margin-right: 40px;
+  margin-bottom: 30px;
+}

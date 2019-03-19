@@ -1,0 +1,550 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+body,
+button,
+input,
+select,
+textarea {
+  font: 12px/1.5tahoma, arial;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: couriernew, courier, monospace;
+}
+small {
+  font-size: 12px;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+legend {
+  color: #000;
+}
+fieldset,
+img {
+  border: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+img {
+  vertical-align: top;
+}
+* {
+  font-size: 14px;
+}
+header {
+  background: linear-gradient(to bottom, #000000, rgba(54, 52, 53, 0.81), #000000);
+  min-width: 980px;
+  height: 40px;
+}
+.hea-cen {
+  width: 980px;
+  margin: 0 auto;
+  color: #fff;
+}
+.hea-cen > img {
+  float: left;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin: 4px 10px 0 10px;
+}
+.hea-cen a {
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0 8px;
+}
+.hea-cen li {
+  line-height: 40px;
+  position: relative;
+}
+.hea-cen li:hover {
+  background-color: #fff;
+}
+.hea-cen li:hover > a {
+  color: black;
+}
+.hea-l-li {
+  float: left;
+}
+.hea-l-li > li {
+  float: left;
+}
+.hea-cen > ul > li > ul {
+  position: absolute;
+  top: 40px;
+  z-index: 10;
+  border: 1px solid black;
+  overflow: hidden;
+  background: linear-gradient(to top, #000000, rgba(54, 52, 53, 0.81), #000000);
+}
+.hea-cen > ul > li > ul li {
+  width: 100px;
+}
+.hea-r-li {
+  float: right;
+}
+.hea-r-li > li {
+  float: left;
+}
+.hea-cen > ul > li > ul {
+  display: none;
+}
+.hea-cen > ul > li:hover > ul {
+  display: block;
+}
+.phone-img {
+  position: absolute;
+  top: 40px;
+  left: -30px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  z-index: 10;
+  display: none;
+}
+.phone:hover > img {
+  display: block;
+}
+.header2 {
+  margin: 0 auto;
+  height: 60px;
+  background-color: aqua;
+}
+.header2 #header2-left {
+  padding-left: 100px;
+  width: 460px;
+  float: left;
+}
+.header2 #header2-left li {
+  float: left;
+  height: 60px;
+  width: 72px;
+  line-height: 60px;
+  text-align: center;
+}
+.header2 #header2-right {
+  float: right;
+  padding-right: 180px;
+  text-align: center;
+}
+.header2 #header2-right li {
+  float: left;
+  height: 60px;
+  line-height: 60px;
+  width: 40px;
+  margin-right: 18px;
+}
+.header2 .grey {
+  background-color: gray;
+}
+.header2 .a:hover {
+  background-color: gray;
+}
+#header3 {
+  height: 60px;
+  width: 470px;
+  margin: 0 auto;
+  margin-left: 200px;
+  position: relative;
+}
+#header3 span {
+  height: 100%;
+  line-height: 60px;
+  font-size: 18px;
+  color: #259B24;
+  margin-right: 106px;
+}
+#header3 input {
+  width: 260px;
+  height: 25px;
+  line-height: 60px;
+  border: 1px solid aquamarine;
+  box-sizing: border-box;
+  background-color: #bbbbbb;
+}
+#header3 img {
+  width: 4%;
+  position: absolute;
+  top: 22px;
+  right: 43px;
+}
+#box {
+  position: relative;
+  width: 1600px;
+  height: 300px;
+  overflow: hidden;
+}
+#box #lbt {
+  width: 4800px;
+}
+#box #lbt li {
+  float: left;
+  width: 1600px;
+}
+#box #lbt img {
+  width: 1600px;
+}
+#box #num {
+  position: absolute;
+  left: 50px;
+  bottom: 20px;
+}
+#box #num li {
+  background: #fff;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  float: left;
+}
+#box #num .on {
+  background: skyblue;
+}
+#cen {
+  margin: 0 auto;
+  width: 980px;
+  height: 120px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#cen img {
+  width: 210px;
+  height: 100%;
+  margin-right: 42px;
+  cursor: pointer;
+  transition: all 1.2s;
+}
+#cen img:hover {
+  transform: scale(1.2);
+}
+#cen1 {
+  width: 980px;
+  margin: 0 auto;
+  height: 510px;
+  margin-top: 30px;
+  box-sizing: border-box;
+}
+#cen1 #cen1-1 {
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+}
+#cen1 .jijiu {
+  font-size: 18px;
+  font-weight: bold;
+}
+#cen1 .tiaoxuan {
+  font-size: 10px;
+  color: #aaaaaa;
+}
+#cen1 #cen1-left {
+  width: 380px;
+  height: 435px;
+  float: left;
+}
+#cen1 .cen1-left-title {
+  width: 100%;
+  height: 230px;
+}
+#cen1 .cen1-left-title img {
+  width: 100%;
+  height: 230px;
+}
+#cen1 .cen1-left-bottom {
+  margin-top: 33px;
+  width: 100%;
+}
+#cen1 .cen1-left-bottom img {
+  width: 160px;
+  height: 120px;
+  margin-right: 55px;
+}
+#cen1 .cen1-left-bottom p {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #aaaaaa;
+}
+#cen1 #cen1-right {
+  float: right;
+  height: 435px;
+  width: 460px;
+  box-sizing: border-box;
+}
+#cen1 .cen1-right-1 {
+  float: left;
+  width: 220px;
+  height: 220px;
+  margin-right: 20px;
+}
+#cen1 .cen1-right-1 img {
+  width: 100%;
+}
+#cen1 .cen1-right-1 p {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #aaaaaa;
+}
+#cen1 .cen1-right2 {
+  width: 220px;
+  height: 210px;
+  float: left;
+  background-color: #8FC253;
+  text-align: center;
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+#cen1 .cen1-right2 p {
+  font-size: 12px;
+  color: white;
+}
+#cen1 .cen1-right2 img {
+  width: 60px;
+  height: 60px;
+  margin-top: 10px;
+}
+#cen1 span:hover {
+  color: #259B24;
+  transform: scale(1.2);
+}
+#cen1 img {
+  cursor: pointer;
+  transition: all 1.2s;
+}
+#cen1 img:hover {
+  transform: scale(1.1);
+}
+#cen1 span {
+  cursor: pointer;
+  transition: all 1.2s;
+}
+#cen1 p {
+  cursor: pointer;
+  transition: all 1.2s;
+}
+#cen1 p:hover {
+  color: pink;
+  transform: scale(1.1);
+}
+.xian {
+  width: 980px;
+  margin: 0 auto;
+  height: 5px;
+  background-color: #aaaaaa;
+}
+.xian:hover {
+  background-color: pink;
+}
+#cen2 {
+  width: 980px;
+  margin: 0 auto;
+  height: 510px;
+  margin-top: 30px;
+  box-sizing: border-box;
+}
+#cen2 #cen1-2 {
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+}
+#cen2 .jijiu {
+  font-size: 18px;
+  font-weight: bold;
+}
+#cen2 .tiaoxuan {
+  font-size: 10px;
+  color: #aaaaaa;
+}
+#cen2 #cen2-left {
+  width: 380px;
+  height: 435px;
+  float: left;
+}
+#cen2 .cen1-left-title {
+  width: 100%;
+  height: 230px;
+}
+#cen2 .cen1-left-title img {
+  width: 100%;
+  height: 230px;
+}
+#cen2 .cen1-left-bottom {
+  margin-top: 33px;
+  width: 100%;
+}
+#cen2 .cen1-left-bottom img {
+  width: 160px;
+  height: 120px;
+  margin-right: 55px;
+}
+#cen2 .cen1-left-bottom p {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #aaaaaa;
+}
+#cen2 #cen2-right {
+  float: right;
+  height: 435px;
+  width: 460px;
+  box-sizing: border-box;
+}
+#cen2 .cen1-right-1 {
+  float: left;
+  width: 220px;
+  height: 220px;
+  margin-right: 20px;
+}
+#cen2 .cen1-right-1 img {
+  width: 100%;
+}
+#cen2 .cen1-right-1 p {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #aaaaaa;
+}
+#cen2 .cen1-right2 {
+  width: 220px;
+  height: 210px;
+  float: left;
+  background-color: #8FC253;
+  text-align: center;
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+#cen2 .cen1-right2 p {
+  font-size: 12px;
+  color: white;
+}
+#cen2 .cen1-right2 img {
+  width: 60px;
+  height: 60px;
+  margin-top: 10px;
+}
+#cen2 span:hover {
+  color: #259B24;
+}
+#cen2 p:hover {
+  color: pink;
+}
+#cen2 img {
+  cursor: pointer;
+  transition: all 1.2s;
+}
+#cen2 img:hover {
+  transform: scale(1.1);
+}
+footer {
+  background: linear-gradient(to bottom, #000000, rgba(62, 59, 61, 0.94), #000000);
+  min-width: 980px;
+  height: 140px;
+  padding: 30px 0;
+  color: #fff;
+}
+.fo-cen {
+  width: 1065px;
+  margin: 0 auto;
+}
+.fo-l {
+  float: left;
+  padding: 20px 0 0 0;
+}
+.fo-l span:nth-child(1) {
+  font-size: 16px;
+  font-weight: 700;
+  vertical-align: top;
+  margin-right: 20px;
+}
+.fo-l span:nth-child(2) {
+  display: inline-block;
+  font-size: 12px;
+  width: 350px;
+}
+.fo-l p {
+  line-height: 80px;
+}
+.fo-r {
+  float: right;
+}
+.fo-r img {
+  width: 100px;
+  height: 100px;
+  vertical-align: middle;
+  margin-left: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .min-width {
+    min-width: 980px;
+  }
+  .header2 {
+    background-color: pink;
+    width: 960px;
+  }
+}
+/*# sourceMappingURL=L-shangcheng.css.map */

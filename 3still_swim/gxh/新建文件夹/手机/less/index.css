@@ -1,0 +1,285 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+body,
+button,
+input,
+select,
+textarea {
+  font: 12px/1.5tahoma, arial, \5b8b\4f53;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: couriernew, courier, monospace;
+}
+small {
+  font-size: 12px;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+legend {
+  color: #000;
+}
+fieldset,
+img {
+  border: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+img {
+  vertical-align: middle;
+}
+a {
+  color: #000;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0.35rem;
+  padding-right: 0.35rem;
+  padding-top: 0.2rem;
+  position: relative;
+}
+header img {
+  width: 0.43rem;
+}
+header span {
+  position: absolute;
+  left: 45%;
+  font-size: 0.28rem;
+  font-weight: bold;
+}
+header a {
+  font-size: 0.16rem;
+  color: red;
+  text-decoration: underline;
+}
+header a:nth-child(3) {
+  animation-name: key;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes key {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0.35rem;
+  padding-right: 0.35rem;
+  width: 90%;
+  height: 0.8rem;
+  background-color: #ddd5d5;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 0.02rem 0.02rem 0px;
+  border-radius: 0.2rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+.nav img:nth-child(1) {
+  width: 0.51rem;
+}
+.nav input {
+  width: 80%;
+  height: 80%;
+  background: transparent;
+  font-size: 0.22rem;
+  border: none;
+}
+.nav img:nth-child(3) {
+  width: 0.51rem;
+}
+center {
+  width: 100%;
+  height: 4rem;
+  overflow: hidden;
+  border-radius: 0.12rem;
+}
+center div {
+  width: 400%;
+  height: 100%;
+  animation-name: d1;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+}
+center div img {
+  float: left;
+  width: 25%;
+  height: 100%;
+}
+@keyframes d1 {
+  0% {
+    margin-left: 0%;
+  }
+  21% {
+    margin-left: 0%;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  46% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  71% {
+    margin-left: -200%;
+  }
+  75% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -300%;
+  }
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0.35rem;
+  padding-right: 0.35rem;
+  margin-top: 0.2rem;
+  height: 3.9rem;
+  flex-wrap: wrap;
+}
+nav > div {
+  height: 33.333%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0.35rem;
+  padding-right: 0.35rem;
+  justify-content: flex-start;
+}
+nav > div > a {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+nav > div > a img {
+  width: 0.6rem;
+  margin-bottom: 0.12rem;
+}
+nav > div > a span {
+  font-size: 0.28rem;
+  letter-spacing: 0.02rem;
+}
+.y_date {
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+.y_date p {
+  font-size: 0.28rem;
+  font-weight: bold;
+}
+.y_date > div {
+  display: flex;
+  align-items: center;
+  padding-left: 0.35rem;
+  padding-right: 0.35rem;
+  padding-left: 0;
+  padding-right: 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.y_date > div img {
+  margin-bottom: 0.13rem;
+  vertical-align: top;
+}
+.y_date > div img:nth-child(1) {
+  width: 65%;
+  height: 2rem;
+}
+.y_date > div img:nth-child(2) {
+  width: 30%;
+  height: 2rem;
+}
+.y_date > div img:nth-child(3) {
+  width: 35%;
+  height: 2rem;
+}
+.y_date > div img:nth-child(4) {
+  width: 60%;
+  height: 2rem;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,183 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+body,
+button,
+input,
+select,
+textarea {
+  font: 12px/1.5tahoma, arial, \5b8b\4f53;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: couriernew, courier, monospace;
+}
+small {
+  font-size: 12px;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+legend {
+  color: #000;
+}
+fieldset,
+img {
+  border: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+img {
+  vertical-align: middle;
+}
+body {
+  background: url(img/01.png);
+  background-size: cover;
+}
+a {
+  color: inherit;
+}
+a:hover {
+  color: skyblue !important;
+}
+header {
+  min-width: 1180px;
+  height: 60px;
+  background: #fffbf0;
+}
+header > div {
+  width: 1180px;
+  height: 100%;
+  margin: 0 auto;
+}
+header > div > p {
+  float: right;
+  font-size: 20px;
+  line-height: 60px;
+}
+header > div > div {
+  float: left;
+}
+header > div > div img {
+  width: 52px;
+  margin-right: 38px;
+}
+header > div > div a {
+  font-weight: bold;
+  margin-right: 12px;
+}
+center {
+  margin-top: 30px;
+}
+center > div {
+  width: 1100px;
+  height: 660px;
+}
+center > div:nth-child(1) {
+  position: relative;
+  background: url(img/phone_all.png);
+  background-size: cover;
+  margin-bottom: 200px;
+}
+center > div:nth-child(1) > div:nth-child(1) {
+  background: url(img/Bitmap.png);
+  background-size: cover;
+  position: absolute;
+  left: 130px;
+  top: 97px;
+  height: 490px;
+  width: 280px;
+  transition: 1.5s;
+  opacity: 0;
+  transform: scale(0);
+}
+center > div:nth-child(1) > div:nth-child(2) {
+  background: url(img/uploadApp.png);
+  background-size: cover;
+  position: absolute;
+  bottom: 108px;
+  right: 263px;
+  height: 190px;
+  width: 199px;
+}
+center > div:nth-child(2) {
+  position: relative;
+  background: url(img/123.png);
+  background-size: contain;
+}
+center > div:nth-child(2) div {
+  position: absolute;
+  bottom: 70px;
+  right: 19px;
+  height: 538px;
+  width: 710px;
+  background: url(img/pad.png);
+  background-size: contain;
+  transition: 2s;
+  opacity: 0;
+  transform: scale(0);
+}
+/*# sourceMappingURL=phone.css.map */

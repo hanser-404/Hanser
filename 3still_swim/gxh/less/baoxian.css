@@ -1,0 +1,197 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+body,
+button,
+input,
+select,
+textarea {
+  font-size: 18px;
+}
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: couriernew, courier, monospace;
+}
+small {
+  font-size: 12px;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+legend {
+  color: #000;
+}
+fieldset,
+img {
+  border: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+i {
+  font-size: 0.3rem;
+  font-style: normal;
+}
+header {
+  display: flex;
+  width: 100%;
+  height: 1rem;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 16px;
+}
+header img {
+  height: 1rem;
+}
+header .gxh1 {
+  visibility: hidden;
+  width: 10%;
+}
+.gxh-p1 {
+  width: 100%;
+  height: 0.6rem;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.gxh-p1 input {
+  width: 70%;
+}
+.gxh2 {
+  width: 100%;
+  height: 5.5rem;
+  background-color: skyblue;
+  display: flex;
+  font-size: 16px;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../img/FmZL1jKHoQujKeWxy1iIGvT0GMOC.jpg);
+}
+.gxh2 .gxh-in {
+  width: 60%;
+}
+.gxh2 .gxh-da {
+  font-size: 1em;
+  font-family: 仿宋, serif;
+  width: 60%;
+  visibility: hidden;
+  opacity: 0.8;
+  color: #000000;
+  border-radius: 10px;
+  background-color: #bed8df;
+}
+.gxh2 .gxh2-1 {
+  width: 60%;
+}
+.gxh-p2 {
+  width: 100%;
+  height: 0.6rem;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.gxh-p2 input {
+  width: 60%;
+}
+.gxh-p2 .gxh-da1 {
+  font-size: 1em;
+  font-family: 仿宋, serif;
+  width: 60%;
+  visibility: hidden;
+  opacity: 0.8;
+  color: #000000;
+  border-radius: 10px;
+  background-color: #bed8df;
+}
+.gxh-p2 .gxh-btn1 {
+  border-radius: 5px;
+}
+.gxh-p3 {
+  margin-top: 0.3rem;
+  font-size: 25px;
+}
+.gxh-p4 {
+  margin-top: 0.3rem;
+}
+#kongbai {
+  height: 1rem ;
+  width: 100%;
+}
+footer {
+  position: fixed;
+  padding: 0.1rem 0;
+  background-color: #d6d6d6;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 0.34rem;
+}
+.footer i {
+  font-size: 0.36rem;
+}
+footer > div > a:hover {
+  color: #163cff;
+}
+.foo-lan {
+  color: #163cff;
+}
+/*# sourceMappingURL=baoxian.css.map */

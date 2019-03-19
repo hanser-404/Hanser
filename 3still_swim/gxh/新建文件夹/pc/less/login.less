@@ -1,0 +1,159 @@
+@import url(All.less);
+
+// 
+a{
+	color:inherit;
+	&:hover{
+		color: skyblue !important;
+	}
+}
+// これは頭
+header{
+	min-width: 1180px;
+	height: 60px;
+	background: #fff;
+	background: rgb(255, 251, 240);
+	>div{
+		width: 1180px;
+		height: 100%;
+		margin: 0 auto;
+		>p{
+			float: right;
+			font-size: 20px;
+			line-height: 60px;
+		}
+		>div{
+			float: left;
+			img{
+				width: 52px;
+				margin-right: 38px;
+			}
+			a{
+				font-weight: bold;
+				margin-right: 12px;
+			}
+		}
+	}
+}
+
+// センター中心块
+center{
+	position: relative;
+	height: 620px;
+	min-width: 1180px;
+	// 给センター内容设置背景イメージ
+	background: url(../image/登录/web_login_bg.ecb39528.jpg) no-repeat;
+	background-size:  cover;
+	// 内容
+	>div{
+		// 设置账号ントを入力输入的位置宽高
+		width: 430px;
+		height: 360px;
+		position: absolute;
+		margin: auto;
+		top: 0;
+		bottom: 0;
+		right:15%;
+		background: #fff;
+		padding: 20px;
+		box-sizing: border-box;
+		// 头部
+		.y_hd{
+			text-align: left;
+			img{
+				width: 50px;
+				margin-right: 16px;
+			}
+		}
+		// 文本入力区
+		.y_text{
+			position: relative;
+			margin-top: 30px;
+			margin-bottom: 55px;
+			input{
+				margin-bottom: 20px;
+				width: 280px;
+				height: 40px;
+			}
+			.y_a{
+				display: block;
+				cursor: pointer;
+				width: 280px;
+				height: 40px;
+				background: #C44040;
+				font-size: 14px;
+				font-weight: bold;
+				color:#fff;
+				border: 0;
+				line-height: 40px;
+				letter-spacing: 8px;
+				border-radius: 10px;
+				margin-bottom: 10px;
+			}
+			// 提示字符
+			.y_se{
+				display: block;
+				opacity: 0;
+				color: red;
+				position: absolute;
+				bottom:-0px;
+				left: 150px;
+			}
+		}
+		// 帮助ヘルプ
+		.y_help{
+			margin-top: 10px;
+			font-size: 14px;
+			padding-left: 12px;
+			overflow: hidden;
+			span{
+				color: #aaa;
+				float: left;
+			}
+			div{
+				float: right;
+				a{
+					margin-right: 12px;
+				}
+			}
+		}
+
+	}
+}
+// 妖精的尾巴
+footer{
+	min-width: 1180px;
+	box-sizing: border-box;
+	height: 220px;
+	background: #3A3737;
+	padding:50px 90px 0 50px;
+	color: #fff;
+	position: relative;
+	p{
+		// width: 1180px;
+		font-size: 16px;
+		margin-bottom: 10px;
+		span{
+			font-size: 36px;
+			margin-right: 12px;
+		}
+	}
+	p:last-child{
+		margin-top: 25px;
+	}
+	img{
+		float: right;
+		width: 103px;
+		margin-bottom: -20px;
+	}
+	>div{
+		position: absolute;
+		bottom: 60px;
+		right: 6px;
+		a{
+			display: inline-block;
+			margin-right: 40px;
+			margin-bottom: 30px;
+		}
+	}
+}

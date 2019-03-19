@@ -1,0 +1,148 @@
+
+*{
+    font-size: 0.24rem;
+}
+header{
+    margin:0 auto;
+    width: 98%;
+    
+    .header2{
+         height:0.8rem;
+         width: 100%;
+         display: flex;
+         align-items: center;
+         img{
+             width: 0.5rem;
+         }
+         span{
+             padding-left: 2rem;
+         }
+    }
+    .header3{
+        display: flex;
+        justify-content:space-between;
+        height: 0.8rem;
+        border: 0.01rem #bbbbbb solid;
+        align-items: center;
+        background-color: white;
+        box-shadow:2px 2px 10px #06c;
+        img{
+            width: 6%;
+            height: 50%;
+        }
+        #fdj{
+            padding-left: 0.2rem;
+        }
+        #yy{
+            padding-right: 0.2rem;
+        }
+        input{
+            width: 6rem;
+            height: 0.6rem;
+            border: none;
+        }
+    }
+}
+
+// 登录头部
+.ml-tap {
+    display: flex;
+    justify-content: space-around;
+    height: 3rem;
+    align-items: center;
+
+    >div {
+        font-size: 0.52rem;
+        font-weight: 100;
+        padding: 0.2rem 0px;
+        border-bottom: 0.04rem solid transparent;
+
+         
+    }
+}
+//点击登录头部的效果
+.ml-tap .active{
+    color: pink;
+    border-bottom: 0.04rem solid pink;
+}
+//登录表单填写
+.ml-group {
+    margin-left: 0.8rem;
+
+    .ml-list-item {
+        padding: 0.44rem 0;
+        border-bottom: 0.01rem solid #dfdfdf;
+        width: 5.9rem;
+        position: relative;
+        input {
+            box-sizing: border-box;
+            border: 0;
+            font-size: 0.34rem;
+            color: #333;
+            letter-spacing: 0.01rem;
+            outline: none;
+        }
+        .ay-text-clear {
+            position: relative;
+            top: 5px;
+            font-size: 0.28rem;
+            text-decoration: none;
+        }
+        .ay-text-clear-sub{
+            color: #999;
+            font-size: 14px;
+            letter-spacing: .3px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            box-sizing: border-box;
+            display: inline-block;
+            padding: 6px 13px;
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+        }
+    }
+}
+
+//登录注册按钮
+.ml-button-group {
+    padding: 0 40px;
+    display: flex;
+    flex-flow: column;
+    height: 120px;
+    justify-content: center;
+    button {
+        border-radius: 25px;
+        margin-bottom: 20px;
+        font-size: 17px;
+        line-height: 45px;
+        border: 0;
+    }
+    .dl-button {
+        color: #fff;
+        background: #ff5523;
+        
+    }
+    .zc-button {
+        background: #fff;
+        border: 1px solid #dfdfdf;
+    }
+}
+footer{
+    display: flex;
+    height: 1.6rem;
+    width: 100%;
+    align-items: center;
+    .f1{
+     width: 33.3%;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    img{
+        width: 30%;
+    }
+    }
+    p{
+        font-size: 0.28rem;
+    }
+}

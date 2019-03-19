@@ -1,0 +1,159 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+body,
+button,
+input,
+select,
+textarea {
+  font: 12px/1.5tahoma, arial, \5b8b\4f53;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: couriernew, courier, monospace;
+}
+small {
+  font-size: 12px;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+legend {
+  color: #000;
+}
+fieldset,
+img {
+  border: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+img {
+  vertical-align: middle;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0.35rem;
+  padding-right: 0.35rem;
+  padding-top: 0.2rem;
+  position: relative;
+}
+header img {
+  width: 0.43rem;
+}
+header span {
+  position: absolute;
+  left: 45%;
+  font-size: 0.28rem;
+  font-weight: bold;
+}
+header a {
+  font-size: 0.16rem;
+  color: red;
+  text-decoration: underline;
+}
+header a:nth-child(3) {
+  animation-name: key;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes key {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.y_i1 {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+center {
+  padding: 0 0.5rem;
+}
+h4,
+p,
+h3 {
+  text-align: left;
+}
+h4 {
+  font-size: 0.36rem;
+}
+p {
+  font-size: 0.28rem;
+}
+.y_xiu {
+  margin: 0.7rem 0;
+}
+h3 {
+  font-size: 0.36rem;
+  color: #5ac7d9;
+}

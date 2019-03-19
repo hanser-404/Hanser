@@ -1,0 +1,179 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+body,
+button,
+input,
+select,
+textarea {
+  font: 12px/1.5tahoma, arial, \5b8b\4f53;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: couriernew, courier, monospace;
+}
+small {
+  font-size: 12px;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+legend {
+  color: #000;
+}
+fieldset,
+img {
+  border: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+img {
+  vertical-align: middle;
+}
+a {
+  color: inherit;
+}
+a:hover {
+  color: skyblue !important;
+}
+body {
+  position: relative;
+}
+header nav {
+  z-index: 10;
+  min-width: 1160px;
+  box-sizing: border-box;
+  height: 60px;
+  padding: 0 30px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 700;
+}
+header nav .y_navdl,
+header nav .y_navdr {
+  height: 100%;
+}
+header nav .y_navdl > a,
+header nav .y_navdr > a {
+  display: inline-block;
+  height: 100%;
+  line-height: 60px;
+  padding: 0 12px;
+}
+header nav .y_navdl > a:hover,
+header nav .y_navdr > a:hover {
+  border-bottom: 3px solid #fff;
+}
+header nav .y_navdl {
+  float: left;
+}
+header nav .y_navdr {
+  float: right;
+}
+.y_lun {
+  width: 100%;
+  height: 529px;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+}
+.y_lun > div {
+  position: relative;
+  margin: 0 auto;
+  width: auto;
+  min-width: 1160px;
+  height: 100%;
+  overflow: hidden;
+}
+.y_lun > div > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.y_lun #left,
+.y_lun #right {
+  position: absolute;
+  top: 0;
+  width: 5%;
+  height: 100%;
+  background: transparent;
+  color: #fff;
+  text-align: center;
+  line-height: 529px;
+  font-size: 26px;
+  cursor: pointer;
+}
+.y_lun #left:hover,
+.y_lun #right:hover {
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.2) 10%, transparent);
+}
+.y_lun #left {
+  left: 0;
+}
+.y_lun #right {
+  right: 0;
+}
