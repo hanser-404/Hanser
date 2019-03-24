@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajaxdemo</title>
+</head>
+<body>
+<h1>你好呀！</h1>
+
+<script>
+  // var xhr = new XMLHttpRequest();
+  // xhr.open("get","/getValue",false);
+  // xhr.send(null);
+  // if(xhr.status >= 200){
+  // 	console.log(xhr.responseText);
+  // }
+
+  // xhr.open("post","/postValue",false);
+  // xhr.send(null);
+  // if(xhr.status >= 200){
+  // 	console.log(xhr.responseText);
+  // }
+
+
+  let $ = {
+    get: function (path, params, callback) {
+      var xhr;
+      if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+        xhr = new XMLHttpRequest();
+      } else {// code for IE6, IE5
+        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4) {
+          if (xhr.status == 200 || xhr.status == 304) {
+            callback({type: "success", data: JSON.parse(xhr.responseText)});
+          } else {
+            callback({type: "error", data: JSON.parse(xhr.responseText)});
+          }
+        }
+      }
+      xhr.open("get", path, true);
+      xhr.send(params);
+    },
+    post: function (path, params, callback) {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4) {
+          if (xhr.status == 200 || xhr.status == 304) {
+            callback({type: "success", data: JSON.parse(xhr.responseText)});
+          } else {
+            callback({type: "error", data: JSON.parse(xhr.responseText)});
+          }
+        }
+      }
+      xhr.open("post", path, true);
+      xhr.send(params);
+    }
+  }
+
+  $.get("../package.json", null, function (res) {
+    console.log(res.data.name);
+  });
+
+  $.post("../package-lock.json", null, function (res) {
+    console.log(res);
+  });
+
+</script>
+</body>
+</html>

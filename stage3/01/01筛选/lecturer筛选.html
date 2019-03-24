@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    a{
+      text-decoration: none;
+
+    }
+  </style>
+  <script>
+    window.onload=function () {
+      var pArr=[
+        {name:"张三",age:"18","sex":"男","jianjie":"qwerr"},
+        {name:"张三",age:"18","sex":"男","jianjie":"qwerr"},
+        {name:"张三",age:"18","sex":"女","jianjie":"qwerr"},
+        {name:"张三",age:"18","sex":"男","jianjie":"qwerr"},
+        {name:"张三",age:"18","sex":"人妖","jianjie":"qwerr"},
+        {name:"张三",age:"18","sex":"男","jianjie":"qwerr"},
+        {name:"张三",age:"18","sex":"女","jianjie":"qwerr"},
+        {name:"张三",age:"18","sex":"男","jianjie":"qwerr"},
+        {name:"张三",age:"18","sex":"人妖","jianjie":"qwerr"},
+        {name:"张三",age:"18","sex":"男","jianjie":"qwerr"},
+      ]
+
+      //初始化加载所有数据
+      showList(["男", "女", "人妖"]);
+      var activeArr = [];
+      //获取tab中按钮的DOM和激活标签的DOM
+      var aBtns = document.querySelectorAll(".tab a");//tab中的按钮
+      console.log(aBtns)
+      var activeBths = document.querySelectorAll(".active-tab span");//激活选项按钮
+      //事件
+      for (var i = 0; i < aBtns.length; i++) {
+        aBtns[i].addEventListener("click", function (event) {
+          //点击的筛选项的值
+          var t = this.innerText;
+          var tIndex = activeArr.indexOf(t);
+          if (tIndex !== -1) {
+            activeArr.splice(tIndex, 1);
+          } else {
+            activeArr.push(t);
+          }
+          showList(activeArr);
+        }, false);
+      }
+
+      function showList(targetArr) {
+        //已经筛选出来的html内容
+        var html = "";
+        targetArr.forEach(function (item, index) {
+          pArr.forEach(function (pObj, pIndex) {
+            if (item == pObj.sex) {
+              html += "<div class='tab-item'>" +
+                "<p>姓名：" + pObj.name + "</p>" +
+                "<p>年龄：" + pObj.age + "</p>" +
+                "<p>性别：" + pObj.sex + "</p>" +
+                "<p>个人简历：" + pObj.jianjie + "</p>" + "</div>"
+            }
+          })
+        })
+        document.querySelector(".tab-show").innerHTML = html;
+      }
+
+    }
+  </script>
+</head>
+<body>
+<div>
+  <div class="active-tab">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="tab">
+    <a href="javascript:;">男</a>
+    <a href="javascript:;">女</a>
+    <a href="javascript:;">人妖</a>
+  </div>
+  <div class="tab-show"></div>
+</div>
+</body>
+</html>

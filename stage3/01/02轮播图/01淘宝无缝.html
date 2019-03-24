@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    #round {
+      width: 520px;
+      height: 280px;
+      border: 1px solid #777777;
+      position: relative;
+      margin: 100px auto;
+      overflow: hidden;
+    }
+
+    #imgList {
+      width: 3640px;
+      height: 280px;
+      font-size: 0;
+      transition: all 0.5s;
+      margin-left: -520px;
+    }
+
+    #roundCen img {
+
+    }
+
+    #butList {
+      position: absolute;
+      bottom: 20px;
+      right: 50px;
+      z-index: 9;
+    }
+
+    #butList a {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 0, 0.65);
+    }
+
+    #butList .choose {
+      background-color: rgba(255, 0, 14, 0.48);
+    }
+
+    #col, #cor {
+      position: absolute;
+      top: 120px;
+      width: 50px;
+      height: 50px;
+      background-color: rgba(255, 255, 0, 0.5);
+    }
+
+    #col {
+      left: 20px;
+    }
+
+    #cor {
+      right: 20px;
+    }
+  </style>
+</head>
+<body>
+<div id="round">
+  <div id="imgList">
+    <img alt="" src="img/5.jpg">
+    <img alt="" src="img/1.jpg">
+    <img alt="" src="img/2.jpg">
+    <img alt="" src="img/3.jpg">
+    <img alt="" src="img/4.jpg">
+    <img alt="" src="img/5.jpg">
+    <img alt="" src="img/1.jpg">
+  </div>
+  <div id="butList">
+    <a class="choose" href="javascript:;"></a>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+  </div>
+  <img alt="" id="col" src="img/l.png">
+  <img alt="" id="cor" src="img/r.png">
+</div>
+
+<script type="text/javascript">
+  window.onload = function () {
+    var round = document.getElementById("round")//最外层盒子
+    var imgList = document.getElementById("imgList")//图片外层盒子
+    var butList = document.getElementById("butList")//按钮外层盒子
+    var buts = butList.getElementsByTagName("a")//小按钮
+    var col = document.getElementById("col")//左箭头
+    var cor = document.getElementById("cor")//右箭头
+
+    var index = 1
+    //定义一个变量接受定时器
+    var timer = null
+    //开启定时器
+    timer = setInterval(sowing, 1000)
+    //鼠标移入清除定时器
+    round.onmouseover = function () {
+      clearInterval(timer)
+    }
+    //鼠标移出开启定时器
+    round.onmouseout = throttle(function () {
+      clearInterval(timer)
+      timer = setInterval(sowing, 1000)
+    },1000)
+
+    //循环为按钮绑定事件
+    for (let i = 0; i < buts.length; i++) {
+      buts[i].onclick = function () {
+        index=i+1
+        sowing()
+      }
+    }
+    //点击左箭头
+    col.onclick=throttle(function () {
+      index=index-2
+      sowing()
+    },600)
+    //点击右箭头
+    cor.onclick=throttle(function () {
+      index=index++
+      sowing()
+    },600)
+
+    //轮播函数
+    function sowing() {
+      imgList.style.transition = "1s";
+      if(index>6){
+        index=1;
+        imgList.style.transition="0s"
+      }else if(index<0){
+        imgList.style.transition=0+"s"
+        index=5
+      }
+      imgList.style.marginLeft = -index * 520 + "px"
+      document.getElementsByClassName("choose")[0].classList.remove("choose");
+      if(index==6){
+        buts[0].className="choose"
+      }else if(index==0){
+        buts[4].className="choose"
+      }else{
+        buts[index-1].className="choose"
+      }
+      index++;
+    }
+
+    //节流
+    function throttle(fn,time) {
+      var beforeTime=0
+      return function () {
+        var currTime=+new Date()
+        if (currTime-beforeTime>=time){
+          fn.apply(this,arguments)
+          beforeTime=currTime
+        }
+      }
+    }
+    //防抖
+    function debounce(fn,time) {
+      var timer=null;
+      return function () {
+        var self=this
+        var arg=arguments
+        clearTimeout(timer)
+        timer=setTimeout(function () {
+          fn.apply(self,arg)
+        },time)
+      }
+    }
+
+  }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    #round {
+      width: 520px;
+      height: 280px;
+      border: 1px solid #777777;
+      position: relative;
+      margin: 100px auto;
+    }
+
+    #imgList {
+      width: 520px;
+      height: 280px;
+      font-size: 0;
+      position: relative;
+      left: 0;
+    }
+
+    #imgList img {
+      position: absolute;
+      opacity: 0;
+      transition: all 1s;
+    }
+    #imgList img:first-child{
+      opacity: 1;
+    }
+
+    #butList {
+      position: absolute;
+      bottom: 10px;
+      left: 200px;
+    }
+
+    #butList a {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      line-height: 30px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 0, 0.65);
+    }
+
+    #butList .choose {
+      background-color: rgba(255, 0, 14, 0.48);
+      color: #0c7eda;
+    }
+
+    #col, #cor {
+      position: absolute;
+      top: 120px;
+      width: 50px;
+      height: 50px;
+    }
+
+    #col {
+      left: 20px;
+    }
+
+    #cor {
+      right: 20px;
+    }
+  </style>
+</head>
+<body>
+<div id="round">
+  <div id="imgList">
+    <img alt="" src="img/1.jpg">
+    <img alt="" src="img/2.jpg">
+    <img alt="" src="img/3.jpg">
+    <img alt="" src="img/4.jpg">
+    <img alt="" src="img/5.jpg">
+  </div>
+  <div id="butList">
+    <a class="choose" href="javascript:;"></a>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+  </div>
+  <img alt="" id="col" src="img/l.png">
+  <img alt="" id="cor" src="img/r.png">
+</div>
+
+<script type="text/javascript">
+  window.onload = function () {
+    var round = document.getElementById("round")//最外层盒子
+    var imgList = document.getElementById("imgList")//图片外层盒子
+    var imgs = imgList.getElementsByTagName("img")//图片
+    var butList = document.getElementById("butList")//按钮的外层盒子
+    var buts = butList.getElementsByTagName("a")//小按钮
+    var col = document.getElementById("col")//左箭头
+    var cor = document.getElementById("cor")//右箭头
+
+    var index = 0
+    //定义一个变量接受定时器
+    var timer = null
+    //开启定时器
+    timer = setInterval(sowing, 1000)
+    //鼠标移入清除定时器
+    round.onmouseover = function () {
+      clearInterval(timer)
+    }
+    //鼠标移出开启定时器
+    round.onmouseout = function () {
+      clearInterval(timer)
+      timer = setInterval(sowing, 1000)
+    }
+    //循环为按钮添加点击事件
+    for (let i = 0; i < buts.length; i++) {
+      buts[i].onmouseover = function () {
+        index = i
+        sowing()
+      }
+    }
+    //点击左箭头
+    col.onclick=function () {
+      index=index-2
+      sowing()
+    }
+    //点击右箭头
+    cor.onclick=function () {
+      index=index++
+      sowing()
+    }
+    //定义变量接受最后一张显示的图片和按钮的下标
+    var clear=0;
+    //创建轮播函数
+    function sowing() {
+      imgs[clear].style.opacity = 0
+      buts[clear].className = ""
+      if (index >= 5) {
+        index = 0
+      }else if(index<0){
+        index = 4
+      }
+      clear=index
+      buts[index].className = "choose"
+      imgs[index].style.opacity = 1
+      index++
+    }
+
+  }
+</script>
+</body>
+
+</html>

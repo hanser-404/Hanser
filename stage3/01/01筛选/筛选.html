@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <script type="text/javascript">
+    window.onload = function () {
+      var pArr = [
+        {
+          name: "张1",
+          sex: "男",
+          age: "20",
+          aihao: "功夫 篮球",
+          gerenjieshao: "我还是一个正直忠诚、勤奋求实的人，会不断追求人格的自我完善；明显的特点是乐观自信、温和开朗、稳重宽厚"
+        },
+        {
+          name: "张2",
+          sex: "女",
+          age: "20",
+          aihao: "功夫 篮球",
+          gerenjieshao: "我还是一个正直忠诚、勤奋求实的人，会不断追求人格的自我完善；明显的特点是乐观自信、温和开朗、稳重宽厚"
+        },
+        {
+          name: "张3",
+          sex: "男",
+          age: "20",
+          aihao: "功夫 篮球",
+          gerenjieshao: "我还是一个正直忠诚、勤奋求实的人，会不断追求人格的自我完善；明显的特点是乐观自信、温和开朗、稳重宽厚"
+        },
+        {
+          name: "陆顺",
+          sex: "人妖",
+          age: "20",
+          aihao: "功夫 篮球",
+          gerenjieshao: "我还是一个正直忠诚、勤奋求实的人，会不断追求人格的自我完善；明显的特点是乐观自信、温和开朗、稳重宽厚"
+        },
+        {
+          name: "张5",
+          sex: "人妖",
+          age: "20",
+          aihao: "功夫 篮球",
+          gerenjieshao: "我还是一个正直忠诚、勤奋求实的人，会不断追求人格的自我完善；明显的特点是乐观自信、温和开朗、稳重宽厚"
+        },
+        {
+          name: "张6",
+          sex: "女",
+          age: "20",
+          aihao: "功夫 篮球",
+          gerenjieshao: "我还是一个正直忠诚、勤奋求实的人，会不断追求人格的自我完善；明显的特点是乐观自信、温和开朗、稳重宽厚"
+        },
+        {
+          name: "张7",
+          sex: "男",
+          age: "20",
+          aihao: "功夫 篮球",
+          gerenjieshao: "我还是一个正直忠诚、勤奋求实的人，会不断追求人格的自我完善；明显的特点是乐观自信、温和开朗、稳重宽厚"
+        }
+      ]
+      var box1 = document.getElementById("box1")
+      var b1span = box1.getElementsByTagName("span")
+      var b2span = document.querySelectorAll(".box2 span")
+      //遍历输出全部
+      for (var m = 0; m < pArr.length; m++) {
+        document.querySelector(".box3").innerHTML += "<p>姓名："
+          + pArr[m].name + "<br/>性别："
+          + pArr[m].sex + "<br/>爱好："
+          + pArr[m].aihao + "<br/>个人介绍："
+          + pArr[m].gerenjieshao + "</p>"
+      }
+
+      //循环添加点击事件
+      for (let i = 0; i < b2span.length; i++) {
+        b2span[i].onclick = function () {
+          //加颜色
+          for (var j = 0; j < b2span.length; j++) {
+            b2span[j].className = ""
+          }
+          this.className = "xz"
+          var reg = new RegExp(this.innerText)
+          if (!reg.test(box1.innerHTML)) {
+            box1.innerHTML += "<span>" + this.innerText + "</span>"
+          }
+          for (var i = 0; i < b1span.length; i++) {
+            b1span[i].onclick = function () {
+              this.parentNode.removeChild(this);
+              // this.remove()
+              bl()
+            }
+          }
+          bl()
+        }
+      }
+
+      function bl() {
+        //加载数据
+        document.querySelector(".box3").innerHTML = ""
+        for (var j = 0; j < pArr.length; j++) {
+          for (var k = 0; k < b1span.length; k++) {
+            if (pArr[j].sex == b1span[k].innerText) {
+              document.querySelector(".box3").innerHTML += "<p>姓名："
+                + pArr[j].name + "<br/>性别："
+                + pArr[j].sex + "<br/>爱好："
+                + pArr[j].aihao + "<br/>个人介绍："
+                + pArr[j].gerenjieshao + "</p>"
+            }
+          }
+        }
+        //隐藏盒子
+        // console.log(box1.innerHTML=="")
+        if (box1.contains(b1span[0])) {
+          box1.style.display = "block"
+        } else {
+          box1.style.display = "none"
+          //清颜色
+          for (var j = 0; j < 3; j++) {
+            b2span[j].className = ""
+          }
+        }
+      }
+
+    }
+  </script>
+  <style>
+    .box {
+      width: 800px;
+      margin: 100px auto;
+      background-color: rgba(255, 255, 0, 0.31);
+      padding: 10px 10px;
+    }
+
+    b {
+      color: red;
+    }
+
+    .box1 span {
+      overflow: hidden;
+      line-height: 40px;
+      padding: 0 10px;
+      background-color: hotpink;
+      margin-left: 10px;
+    }
+
+    .box1 {
+      width: 100%;
+      height: 40px;
+      border: 1px solid #999999;
+      display: none;
+    }
+
+    .box2 {
+      width: 100%;
+      border: 1px solid #999999;
+      margin: 5px 0;
+    }
+
+    .box2 span {
+      line-height: 40px;
+      padding: 0 10px;
+      border: 1px solid #999999;
+      margin-left: 5px;
+    }
+
+    .box3 {
+      min-height: 400px;
+    }
+
+    .box3 div {
+
+    }
+
+    .xz {
+      background-color: #0c7eda;
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <div class="box1" id="box1"></div>
+  <div class="box2">
+    <span>男</span>
+    <span>女</span>
+    <span>人妖</span>
+  </div>
+  <div class="box3">
+  </div>
+</div>
+</body>
+</html>

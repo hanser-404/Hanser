@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .cube {
+      width: 300px;
+      height: 300px;
+      margin: 100px auto 0;
+      transform-style: preserve-3d;
+      position: relative;
+      transform:rotateX(30deg) rotateY(45deg) rotateZ(-90deg);
+      animation: mf 10s linear infinite;
+    }
+    @keyframes mf{
+      100%{
+        transform: rotateX(300deg) rotateY(450deg) rotateZ(-900deg);
+      }
+      /*100%{
+        transform: rotate(2000deg) rotateY(90deg) rotateZ(120deg);
+      }*/
+    }
+    .cube div {
+      opacity: 0.8;
+      position: absolute;
+      width: 300px;
+      height: 300px;
+    }
+
+    .cube div:nth-child(1) {
+      transform: rotateX(90deg) translateZ(150px);
+      background-color: #0c7eda;
+    }
+
+    .cube div:nth-child(2) {
+      transform: rotateX(90deg) translateZ(-150px);
+      background-color: red;
+    }
+
+    .cube div:nth-child(3) {
+      transform: rotateY(90deg) translateZ(150px);
+      background-color: #777777;
+    }
+
+    .cube div:nth-child(4) {
+      transform: rotateY(90deg) translateZ(-150px);
+      background-color: yellow;
+    }
+
+    .cube div:nth-child(5) {
+      transform: translateZ(150px);
+      background-color: #3eda5e;
+    }
+
+    .cube div:nth-child(6) {
+      transform: translateZ(-150px);
+      background-color: lightcoral;
+    }
+
+  </style>
+</head>
+<body>
+<div class="cube">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+</body>
+</html>

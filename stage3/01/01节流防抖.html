@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    window.onload = function () {
+      var but = document.getElementById("but")
+      // but.onclick=throttle(function () {
+      //   console.log(1);
+      // },1000)
+
+
+      //节流
+      function throttle(fn,time) {
+        var beforeTime=0;
+        return function () {
+          var currTime=+new Date();
+          if (currTime-beforeTime>=time){
+            fn.apply(this,arguments)
+            beforeTime=currTime
+          }
+        }
+      }
+      //防抖
+      function debounce(fn,time) {
+        var timer=null;
+        return function () {
+          var self=this;
+          var arg=arguments;
+          clearTimeout(timer);
+          timer=setTimeout(function () {
+            fn.apply(self,arg)
+          },time)
+        }
+      }
+
+
+      //节流
+      // function throttle(fn,time) {
+      //   var beforeTime=0;
+      //   return function () {
+      //     var currTime=+new Date();
+      //     if(currTime-beforeTime>=time){
+      //       fn.apply(this,arguments)
+      //       beforeTime=currTime
+      //     }
+      //   }
+      // }
+      //防抖
+      // function debounce(fn,time) {
+      //   var timer=null
+      //   return function () {
+      //     var self=this;
+      //     var arg=arguments;
+      //     clearTimeout(timer)
+      //     timer=setTimeout(function () {
+      //       fn.apply(self,arg)
+      //     },time)
+      //   }
+      // }
+
+      //节流
+      // function throttle(fn,time) {
+      //   var beforeTime=0
+      //   return function () {
+      //     var currTime=+new Date()
+      //     if (currTime-beforeTime>=time){
+      //       fn.apply(this,arguments)
+      //       beforeTime=currTime
+      //     }
+      //   }
+      // }
+      // //防抖
+      // function debounce(fn,time) {
+      //   var timer=null;
+      //   return function () {
+      //     var self=this
+      //     var arg=arguments
+      //     clearTimeout(timer)
+      //     timer=setTimeout(function () {
+      //       fn.apply(self,arg)
+      //     },time)
+      //   }
+      // }
+
+
+      // //节流
+      // function throttle(fn,time) {
+      //   var beforeTime=0;
+      //   return function () {
+      //     var currTime=+new Date()
+      //     if (currTime-beforeTime>=time){
+      //       fn.apply(this,arguments)
+      //       beforeTime=currTime
+      //     }
+      //   }
+      // }
+      // //防抖
+      // function debounce(fn,time) {
+      //   var timer=null;
+      //   return function () {
+      //     var self=this
+      //     var arg=arguments
+      //     clearTimeout(timer)
+      //     timer=setTimeout(function () {
+      //       fn.apply(self,arg)
+      //     },time)
+      //   }
+      // }
+      
+      
+      
+
+    }
+
+
+  </script>
+</head>
+<body>
+<button id="but">点我</button>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .content{
+      width: 520px;
+      height: 280px;
+      margin: 100px auto 0;
+      position: relative;
+    }
+    .le,.ri{
+      position: absolute;
+      top: 120px;
+      width: 60px;
+      height: 60px;
+      background-color: rgba(255, 255, 0, 0.51);
+    }
+    .le{
+      left: 20px;
+    }
+    .ri{
+      right: 20px;
+    }
+    .section{
+      width: 104px;
+      height:100%;
+      float: left;
+      position: relative;
+    }
+    .section{
+      transform-style: preserve-3d;
+      transition: all 1s;
+    }
+
+    .section>div{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    .sec1{
+      background: url("img/1.jpg") no-repeat;
+      transform:rotateX(90deg) translateZ(140px);
+    }
+    .sec2{
+      background: url("img/2.jpg") no-repeat;
+      transform:rotateX(-90deg) translateZ(140px);
+    }
+    .sec3{
+      background: url("img/3.jpg") no-repeat;
+      transform:translateZ(140px);
+    }
+    .sec4{
+      background: url("img/4.jpg") no-repeat;
+      transform:rotateX(180deg) translateZ(140px);
+    }
+    .section:nth-child(1)>div{
+      background-position-x: 0;
+    }
+    .section:nth-child(2)>div{
+      background-position-x: -104px;
+    }
+    .section:nth-child(3)>div{
+      background-position-x: -208px;
+    }
+    .section:nth-child(4)>div{
+      background-position-x: -312px;
+    }
+    .section:nth-child(5)>div{
+      background-position-x: -416px;
+    }
+    .section:nth-child(1){
+      /*transform:rotateX(30deg);*/
+      transition-delay: 0s;
+    }
+    .section:nth-child(2){
+      transition-delay: 0.2s;
+    }
+    .section:nth-child(3){
+      transition-delay: 0.4s;
+    }
+    .section:nth-child(4){
+      transition-delay: 0.6s;
+    }
+    .section:nth-child(5){
+      transition-delay: 0.8s;
+    }
+    /*.content:hover .section{*/
+      /*transform:rotateX(90deg);*/
+    /*}*/
+  </style>
+</head>
+<body>
+<div class="content">
+  <div class="section">
+    <div class="sec1"></div>
+    <div class="sec2"></div>
+    <div class="sec3"></div>
+    <div class="sec4"></div>
+  </div>
+  <div class="section">
+    <div class="sec1"></div>
+    <div class="sec2"></div>
+    <div class="sec3"></div>
+    <div class="sec4"></div>
+  </div>
+  <div class="section">
+    <div class="sec1"></div>
+    <div class="sec2"></div>
+    <div class="sec3"></div>
+    <div class="sec4"></div>
+  </div>
+  <div class="section">
+    <div class="sec1"></div>
+    <div class="sec2"></div>
+    <div class="sec3"></div>
+    <div class="sec4"></div>
+  </div>
+  <div class="section">
+    <div class="sec1"></div>
+    <div class="sec2"></div>
+    <div class="sec3"></div>
+    <div class="sec4"></div>
+  </div>
+  <img class="le" alt="" src="img/l.png">
+  <img class="ri" alt="" src="img/r.png">
+</div>
+<<script type="text/javascript">
+  window.onload=function () {
+    var content=document.querySelector(".content")
+    var section=document.querySelectorAll(".section")
+    var le=document.querySelector(".le")
+    var ri=document.querySelector(".ri")
+    //创建旋转角度的索引
+    var index=0
+    //创建接受定时器的变量
+    var timer=0;
+    timer=setInterval(function () {
+      index++
+      rotate(index)
+    },2000)
+    //鼠标移入清楚定时器
+    content.onmouseover=function(){
+      clearInterval(timer)
+    }
+    //鼠标移出开启定时器
+    content.onmouseout=function(){
+      clearInterval(timer)
+      timer=setInterval(function () {
+        index++
+        rotate(index)
+      },2000)
+    }
+    //点击左箭头
+    le.onclick=throttle(function () {
+      index--
+      rotate(index)
+    },2000)
+    //点击右箭头
+    ri.onclick=throttle(function () {
+      index++
+      console.log(index)
+      rotate(index)
+    },2000)
+
+    //旋转角度的函数
+    function rotate(index) {
+      // index1++
+      //循环为盒子添加旋转效果
+      for (var i = 0; i <section.length ; i++) {
+        section[i].style.transform="rotateX("+-index*90+"deg)"
+      }
+    }
+
+    //节流
+    function throttle(fn,time) {
+      var beforeTime=0;
+      return function () {
+        var currTime=+new Date();
+        if (currTime-beforeTime>=time){
+          fn.apply(this,arguments)
+          beforeTime=currTime
+        }
+      }
+    }
+    //防抖
+    function debounce(fn,time) {
+      var timer=null;
+      return function () {
+        var self=this;
+        var arg=arguments;
+        clearTimeout(timer);
+        timer=setTimeout(function () {
+          fn.apply(self,arg)
+        },time)
+      }
+    }
+
+  }
+</script>
+</body>
+</html>

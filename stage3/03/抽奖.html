@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #box1 {
+      width: 600px;
+      height: 600px;
+      border: 1px solid #777;
+    }
+
+    #box1 div {
+      float: left;
+      background-color: yellow;
+      width: 200px;
+      line-height: 200px;
+      text-align: center;
+      box-sizing: border-box;
+      border: 1px solid #777777;
+    }
+
+    #box1 .sele {
+      background-color: red;
+    }
+  </style>
+  <script>
+    window.onload = function () {
+      var box1 = document.getElementById("box1")
+      var b1chied = box1.querySelectorAll("div")
+      var timer = null
+      but.onclick = function () {
+        var selec=document.getElementsByClassName("sele")
+        clearInterval(timer)
+        timer = setInterval(sele, 100)
+        function sele() {
+          selec[0] && selec[0].classList.remove("sele")
+          var sj = Math.floor(Math.random() * 9)//0到9的随机数
+          b1chied[sj].className = "sele"
+        }
+        setTimeout(function () {
+          clearInterval(timer)
+        }, 4000)
+      }
+    }
+  </script>
+</head>
+<body>
+<button id="but">抽奖</button>
+<div id="box1">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+</div>
+</body>
+</html>

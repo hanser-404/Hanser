@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    #round {
+      width: 520px;
+      height: 280px;
+      border: 1px solid #777777;
+      position: relative;
+    }
+
+    #imgList {
+      width: 3640px;
+      height: 280px;
+      font-size: 0;
+      position: absolute;
+      left: 0;
+    }
+
+    #roundCen img {
+
+    }
+
+    #butList {
+      position: absolute;
+      bottom: 20px;
+      right: 50px;
+    }
+
+    #butList a {
+      display: inline-block;
+      width: 30px;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 50%;
+      text-decoration: none;
+      color: inherit;
+      background-color: rgba(255, 255, 0, 0.65);
+    }
+
+    #butList .choose {
+      background-color: rgba(255, 0, 14, 0.48);
+      color: #0c7eda;
+    }
+
+    #col, #cor {
+      position: absolute;
+      top: 120px;
+      width: 50px;
+      height: 50px;
+    }
+
+    #col {
+      left: 20px;
+    }
+
+    #cor {
+      right: 20px;
+    }
+  </style>
+</head>
+<body>
+<div id="round">
+  <div id="imgList">
+    <img alt="" src="img/5.jpg">
+    <img alt="" src="img/1.jpg">
+    <img alt="" src="img/2.jpg">
+    <img alt="" src="img/3.jpg">
+    <img alt="" src="img/4.jpg">
+    <img alt="" src="img/5.jpg">
+    <img alt="" src="img/1.jpg">
+  </div>
+  <div id="butList">
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+  </div>
+  <img alt="" id="col" src="img/l.png">
+  <img alt="" id="cor" src="img/r.png">
+</div>
+
+<script type="text/javascript">
+  window.onload = function () {
+    var round = document.getElementById("round")
+    var imgList = document.getElementById("imgList")
+    var butList = document.getElementById("butList")
+    var butList = document.getElementById("butList")
+    var col = document.getElementById("col")
+    var cor = document.getElementById("cor")
+
+    // console.log(parseInt(imgList.style.left))
+    move(-10,-520)
+    //speed移动速度，target:执行动画的目标位置
+    function  move(speed,target) {
+      var timer=null
+      clearInterval(timer);
+      timer = setInterval(function () {
+        var imgListLeft = parseInt(getComputedStyle(imgList, null)["left"])
+        console.log(imgListLeft)
+        //判断到了没有
+        if (imgListLeft < target) {
+          imgListLeft = target;
+        }
+        imgList.style.left=imgListLeft+speed+"px"
+
+        //当元素移动到0px时，使其停止执行动画
+        if (newValue == target) {
+          //达到目标，关闭定时器
+          clearInterval(obj.timer);
+          //动画执行完毕，调用回调函数
+          callback && callback();
+        }
+
+      }, 30);
+
+    }
+
+    
+    
+    
+    /*
+    * 定义一个函数，用来获取指定元素的当前的样式
+    * 参数：
+    * 		obj 要获取样式的元素
+    * 		name 要获取的样式名
+    */
+    function getStyle(obj, name) {
+      if (window.getComputedStyle) {
+        //正常浏览器的方式，具有getComputedStyle()方法
+        return getComputedStyle(obj, null)[name];
+      } else {
+        //IE8的方式，没有getComputedStyle()方法
+        return obj.currentStyle[name];
+      }
+    }
+  }
+</script>
+</body>
+
+</html>
