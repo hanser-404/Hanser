@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>懒加载</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    img {
+        vertical-align: top;
+        width: 400px;
+        height: 300px;
+    }
+
+    .box li {
+        list-style: none;
+        height: 600px;
+        border: 1px solid skyblue;
+        box-sizing: border-box;
+    }
+
+    .box img {
+        margin: 0 auto;
+        display: inline-block;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <ul>
+
+            <li><img data-src="images/1.jpg"></li>
+            <li><img data-src="images/2.jpg"></li>
+            <li><img data-src="images/3.jpg"></li>
+            <li><img data-src="images/4.jpg"></li>
+            <li><img data-src="images/5.jpg"></li>
+            <li><img data-src="images/6.jpg"></li>
+            <li><img data-src="images/7.jpg"></li>
+            <li><img data-src="images/8.jpg"></li>
+        </ul>
+    </div>
+    <script>
+        window.onload = function(){
+            let img = document.querySelectorAll("img")
+            for (let i = 0; i < img.length; i++) {
+                if (img[i].getBoundingClientRect().top < window.innerHeight) {
+                    img[i].src = img[i].dataset.src
+                }
+            }
+        }
+        window.onscroll = dobunce(function () {
+            let img = document.querySelectorAll("img")
+            for (let i = 0; i < img.length; i++) {
+                if (img[i].getBoundingClientRect().top < window.innerHeight) {
+                    img[i].src = img[i].dataset.src
+                }
+            }
+        }, 500)
+
+        function dobunce(fn, wait) {
+            let timer = null;
+            let self = this;
+            let args = arguments
+            return function () {
+                clearTimeout(timer);
+                timer = setTimeout(function () {
+                    fn.apply(self, args)
+                }, wait)
+            }
+        }
+    </script>
+</body>
+
+</html>
