@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>无缝轮播图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            margin: 220px auto;
+            width: 520px;
+            height: 280px;
+            border: 1px solid red;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .box-cen {
+            width: 500%;
+            height: 100%;
+            /*transition: 1s;*/
+            margin-left: -520px;
+        }
+
+        .box-cen img {
+            width: 520px;
+            float: left;
+            height: 100%;
+        }
+
+        .dian {
+            position: absolute;
+            bottom: 0;
+            left: 42%;
+        }
+
+        .dian a {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border-radius: 10px;
+            transition: .3s;
+        }
+
+        .active {
+            /*opacity: .7;*/
+            background: #ff9900 !important;
+        }
+
+        .left, .right {
+            width: 30px;
+            height: 50px;
+            background: rgba(0, 0, 0, .4);
+            font-size: 30px;
+        }
+
+        .left {
+            position: absolute;
+            left: 0;
+            top: 50%;
+        }
+
+        .right {
+            position: absolute;
+            right: 0;
+            top: 50%;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="box-cen" id="lunbo">
+        <img src="./img/TB4.jpg" alt="">
+        <img src="./img/TB2.jpg" alt="">
+        <img src="./img/TB3.jpg" alt="">
+        <img src="./img/TB4.jpg" alt="">
+        <img src="./img/TB2.jpg" alt="">
+    </div>
+    <div class="dian" id="active">
+        <a href="javascript:;" class="active"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+    </div>
+    <div class="left" id="zuo"><</div>
+    <div class="right" id="you">></div>
+</div>
+<script>
+    window.onload = function () {
+        var imgs = lunbo.getElementsByTagName('img');//获取轮播列表里的所有img
+        var width = parseInt(getComputedStyle(imgs[0]).width);//获取img宽度并转成数值
+        var index = 2;//图片索引，默认第二张（视觉第一张）
+        var index2 = 1;//点点索引，默认0
+        var as = active.getElementsByTagName("a");//三个点
+
+        //   定义  切换图片的函数
+        function change(a) {
+            lunbo.style.transition = .3 + "s";//重新设置过度时间
+            if (a >= 0) {//如果传入了值，把参数值赋给index
+                index = a + 1;
+            }
+            if (index > 4) {//如果索引是5，说明超出了，把图片轮到视觉第二张
+                index = 2;
+            } else if (index < 0) {
+                index = 2;
+            }
+            lunbo.style.marginLeft = -width * index + "px";//显示第几张图片就左移 索引*图片的宽度
+            if (lunbo.style.marginLeft == -2080 + "px") {//如果到了最后一张图（视觉第一张）
+                //设置超时器，在最后一张图片过渡时间完成后，去除过渡时间并且将视图跳到显示的第一张图片去.
+                bc = setTimeout(function () {
+                    lunbo.style.transition = 0 + "s";
+                    lunbo.style.marginLeft = -520 + "px";
+                }, 300)
+            }
+            if (lunbo.style.marginLeft == 0 + "px") {
+                bd = setTimeout(function () {
+                    lunbo.style.transition = 0 + "s";
+                    lunbo.style.marginLeft = -width * 3 + "px";
+                }, 280)
+            }
+            index++;
+        }
+
+        //    定义自动切换点点的方法
+        function dian(b) {
+            for (let i = 0; i < as.length; i++) {
+                as[i].classList.remove("active");
+            }
+            if (b >= 0) {
+                index2 = b
+            }
+            if (index2 > 2) {
+                index2 = 0;
+            } else if (index2 < 0) {
+                index2 = 2;
+            }
+            as[index2].classList.add("active");
+            index2++;
+        }
+
+        //节流
+        function throttle(fn, wait) {
+            var beforetime = 0;
+            return function () {
+                var now = +new Date();
+                var self = this;
+                var args = arguments;
+                if (now - beforetime >= wait) {
+                    fn.apply(self, args);
+                    beforetime = now;
+                }
+            }
+        }
+
+        //点击上一张,并且添加节流
+        zuo.onclick = throttle(function () {
+            index -= 2;
+            clearInterval(ab);
+            change();
+            Interval1();
+
+            clearInterval(ac)
+            index2 -= 2;
+            dian();
+            Interval2();
+        }, 301);
+
+        //点击下一张 ,并添加节流
+        you.onclick = throttle(function () {
+            clearInterval(ab);//关闭轮播图计时器
+            change();//执行一次切换图片方法
+            Interval1();//开启轮播图计时器
+
+            clearInterval(ac)
+            dian();
+            Interval2();
+        }, 301);
+
+
+        //给小点添加点击事件
+        for (let i = 0; i < as.length; i++) {
+            as[i].onclick = function () {
+                clearInterval(ab);
+                clearInterval(ac)
+                change(i);
+                dian(i);
+                Interval1();
+                Interval2();
+            }
+        }
+
+        //开启轮播图定时器的方法
+        function Interval1() {
+            ab = setInterval(change, 2500)
+        };
+
+        //点点轮播的方法
+        function Interval2() {
+            ac = setInterval(dian, 2500);
+        };
+        Interval1();
+        Interval2();
+    }
+</script>
+</body>
+</html>

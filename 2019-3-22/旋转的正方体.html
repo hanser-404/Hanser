@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正方体</title>
+</head>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            border:1px solid red;
+            margin: 220px auto;
+            position: relative;
+            transition: 3s;
+            transform-style: preserve-3d;/*创建3D空间*/
+            transform: rotateY(-30deg) rotateX(39deg);/*方便观看立体效果*/
+            animation-name: box;
+            animation-duration: 8s;
+            /*perspective: 600px;*/
+            transform-origin: center;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes box {
+            0%{
+                transform: rotateY(-30deg) rotateX(0deg);
+            }
+            50%{
+                border-radius: 50%;
+            }
+            100%{
+                transform: rotateY(330deg) rotateX(720deg);
+            }
+        }
+        li{
+            width: 200px;
+            height: 200px;
+            list-style: none;
+            position: absolute;
+            opacity: .5;
+            text-align: center;
+            line-height: 200px;
+            font-size: 26px;
+        }
+        .up{
+            background: red;
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        .down{
+            background: orange;
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+        .left{
+            background: skyblue;
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        .right{
+            background: blue;
+            transform: rotateY(-90deg) translateZ(100px);
+
+        }
+        .before{
+            background:cyan;
+            transform:translateZ(100px);
+        }
+        .after{
+            background:purple;
+            transform:translateZ(-100px);
+        }
+    </style>
+<body>
+    <ul class="box1">
+        <li class="up">1</li>
+        <li class="down">2</li>
+        <li class="left">3</li>
+        <li class="right">4</li>
+        <li class="before">5</li>
+        <li class="after">6</li>
+    </ul>
+</body>
+</html>
