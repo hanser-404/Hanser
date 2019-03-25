@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>交互菜单栏</title>
+    <script src="../jquery-1.12.3.js"></script>
+    <style>
+        #box1,#box2,#box3 {
+            width: 100px;
+            height: 40px;
+            background-color: #e5eecc;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+        }
+        #box_1,#box_2,#box_3{
+            display: none;
+        }
+        .box1_1,.box2_1,.box3_1 {
+            width: 100px;
+            height: 40px;
+            background-color: pink;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1">菜单一</div>
+    <div id="box_1">
+        <div class="box1_1">子菜单一</div>
+        <div class="box1_1">子菜单二</div>
+        <div class="box1_1">子菜单三</div>
+    </div>
+
+    <div id="box2">菜单二</div>
+    <div id="box_2">
+        <div class="box2_1">子菜单一</div>
+        <div class="box2_1">子菜单二</div>
+        <div class="box2_1">子菜单三</div>
+    </div>
+
+    <div id="box3">菜单三</div>
+    <div id="box_3">
+        <div class="box3_1">子菜单一</div>
+        <div class="box3_1">子菜单二</div>
+        <div class="box3_1">子菜单三</div>
+    </div>
+
+</body>
+<script>
+    $(document).ready(function () {
+        $("#box1").click(function () {
+            $("#box_1").slideToggle("fast");
+            $("#box_2").slideUp("fast");
+            $("#box_3").slideUp("fast");
+        });
+        $("#box2").click(function () {
+            $("#box_1").slideUp("fast");
+            $("#box_2").slideToggle("fast");
+            $("#box_3").slideUp("fast");
+        });
+        $("#box3").click(function () {
+            $("#box_1").slideUp("fast");
+            $("#box_2").slideUp("fast");
+            $("#box_3").slideToggle("fast");
+        });
+    });
+</script>
+
+</html>
