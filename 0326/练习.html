@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>链式调用</title>
+</head>
+
+<body>
+    <script>
+        function Person(name) {
+            this.name = name;
+        }
+
+        Person.prototype.drive = function () {
+            console.log("我叫" + this.name + "是一名老司机!");
+            return this;
+        };
+        Person.prototype.peiqi = function () {
+            console.log("小猪沛奇身上纹，沛沛不是一个人！");
+            return this;
+        } 
+        Person.prototype.go = function () {
+            console.log("今天我带你们去秋名山飙车去！！！");
+            return this;
+        };
+
+        var person = new Person("小猪沛骑");
+        person.peiqi().drive().go();
+        window.onload = function () {
+            
+        }
+    </script>
+</body>
+
+</html>
