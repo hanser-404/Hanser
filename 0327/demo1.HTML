@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>测试</title>
+    <style></style>
+</head>
+
+<body>
+    <script>
+        // window.onload = function () {
+        //     let a = 1;
+        //     var b = 3;
+        // }
+
+        // {
+        //     let c= 10;
+        //     var d = 2;
+        //     alert(c);
+        // }
+        // alert(c);
+        // alert(d);
+        // var arr = [1,2,3,4,5]
+        // for (let i = 0; i < arr.length; i++) {}
+
+        // console.log(i);
+        // var tmp = 123;  let之前 声明都会报错
+
+        // if (true) {
+        //     tmp = 'abc'; // ReferenceError
+        //     let tmp;
+        // }
+        // if (true) {
+        // TDZ开始
+        // tmp = 'abc'; // ReferenceError
+        // console.log(tmp); // ReferenceError
+
+        // let tmp; // TDZ结束
+        // console.log(tmp); // undefined
+
+        // tmp = 123;
+        // console.log(tmp); // 123
+        // }
+        //是因为参数x默认值等于另一个参数y，而此时y还没有声明，
+        //属于”死区“。
+        //如果y的默认值是x，就不会报错，因为此时x已经声明了。
+        // function bar(x = y, y = 2) {
+        // return [x, y];
+        // }
+
+        // bar();
+        // function bar(x = 2, y = x) {
+        //     return [x, y];
+        // }
+        // bar();
+
+        // var fakeArray = {
+
+        //     "0": "first",
+        //     "1": "second",
+        //     "2": "third"
+        // };
+
+        // var arr = Array.slice.call(fakeArray,0);
+        // console.log(arr);
+        // console.log(arr instanceof Array == true);
+        // console.log(fakeArray instanceof Array === true);
+        // var s = 'hello';
+        //内存泄漏
+        // for (var i = 0; i < s.length; i++) {
+        //     console.log(s[i]);
+        // }
+
+        // console.log(i);
+        function f1() {
+            let n = 5;
+            if (true) {
+                let n = 10;
+            }
+            console.log(n);
+        }
+        f1();
+
+        function f2() {
+            var n = 5;
+            if (true) {
+                var n = 10;
+            }
+            console.log(n);
+        }
+        f2();
+    </script>
+</body>
+
+</html>

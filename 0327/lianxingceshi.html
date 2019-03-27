@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>链型调用</title>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        window.JQUERY = window.$ = funciton(){
+            return new JqueryConstructor(selector);
+        }
+        function JqueryConstructor(selector) {
+            var nList = document.querySelectorAll(select);
+            this.eles = Array.prototype.slice.call(nList,0);
+            return this;
+        }
+
+        JqueryConstructor.prototype = {
+            addClass: function(){
+                
+            }
+        }
+    </script>
+</body>
+</html>
