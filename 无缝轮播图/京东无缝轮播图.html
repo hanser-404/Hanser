@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>京东无缝轮播图</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0
+        }
+        .lbt{
+            width: 600px;
+            height: 300px;
+            margin: 200px auto;
+            border: 1px solid #808080;
+            overflow: hidden;
+            position: relative;
+        }
+        .lbt ul {
+            width: 5000px;
+            height: 300px;
+            list-style: none;
+        
+        }
+        .lbt img{
+            width: 600px;
+            height: 300px;
+        }
+        .lbt li{
+            float: left;
+        }
+        .left{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            top: 50%;
+            left:0;
+            margin-top: -20px;
+            background: rgba(0, 0, 0, .6);
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+        }
+        .right{
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 50%;
+            right:0;
+            margin-top: -20px;
+            background: rgba(0, 0, 0, .6);
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="lbt">
+        <ul class="lbt-ul">
+            <li>
+                <a>
+                    <img src="images/京东1.jpg">
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img src="images/京东2.jpg">
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img src="images/京东3.jpg">
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img src="images/京东4.jpg">
+                </a>
+            </li>
+        </ul>
+        <div class="left"><</div>
+        <div class="right">></div>
+    </div>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+        var index=0;
+    //向左边点击按钮并创建节流函数
+    $(".left").click(jieliu(function(){
+
+        goleft();
+    },500))
+//向右边边点击按钮并创建节流函数
+    $(".right").click(jieliu(function(){
+        goright()
+    },500))
+
+
+    //向右运动
+    function  goright(){
+        if(index== $(".lbt li").length-1){
+            index=0;
+            $(".lbt-ul").css("left",0);
+        }
+        index ++;
+        move();
+    }
+
+    //向左运动
+
+    function goleft(){
+        if(index==0){
+         index=$(".lbt li").length-1;
+         $(".lbt-ul").css("left",index*-590);
+        }
+        index--;
+        move();
+    }
+
+
+//使用节流
+    function jieliu(){
+        var beforeTime=0;
+        return function(fn,time){
+
+            var self=this;
+            var args=arguments;
+            var currTime=  + new Date();
+            if( currTime-beforeTime>=time){
+                fn.apply(self,args)
+                beforeTime=currTime;
+            }
+        }
+    }
+
+    //封装了一个运动函数
+     function mover(){
+         $(".lbt-ul").animate({
+             "left":-590 * index+"px",
+         },500)
+         follow();
+     }
+    </script>
+</body>
+
+</html> 
+
